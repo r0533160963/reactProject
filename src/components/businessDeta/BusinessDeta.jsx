@@ -41,7 +41,7 @@ const BusinesDeta = observer(() => {
           <br />
           {DataStore.businessData.phone}
           <br />
-          {'yair@law_firm.com'}
+          {DataStore.businessData.email}
         </Typography>
       </CardContent>
       <Typography sx={{ fontSize: 14 }} color="text.secondary">
