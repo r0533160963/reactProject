@@ -22,7 +22,6 @@ const AddMeeting= observer(() => {
     phone:null,
     email:'', 
     dateTime:null,
-
   })
  
  const [open, setOpen] = React.useState(false);
