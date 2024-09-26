@@ -19,8 +19,11 @@
   padding-top: 15vh;
   color: rgba(62, 2, 2, 0.944); 
 }
+#login .button-login{
+  background-color:rgba(62, 2, 2, 0.88)
+}
 #loginid{
-  background-color: #010006d8;
+  background-color: #77777ad8;
   padding-right: 40rem;
   padding-bottom: 6rem;
 

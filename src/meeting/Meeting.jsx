@@ -20,7 +20,7 @@ const Meeting= observer(() => {
      const timeDiff = Math.abs(meetingDate.getTime() - today.getTime());
      const diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
     if(  diffDays<0) 
-     return 'non'
+     return non 
  else
      if (diffDays===1) {
        return 'red'; 

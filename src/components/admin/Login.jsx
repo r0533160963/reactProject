@@ -10,7 +10,6 @@ import Button from '@mui/joy/Button';
 import Link from '@mui/joy/Link';
 import { login } from '../../data/Srerver';
 import { useNavigate } from 'react-router-dom';
-//import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import DataStore from '../../data/DataStore';
@@ -19,11 +18,8 @@ import '../../App.css'
 
 const Login= observer(()=>{
 
-  const { mode, setMode } = useColorScheme();
   const [mounted, setMounted] = React.useState(false);
 
-  // necessary for server-side rendering
-  // because mode is undefined on the server
   React.useEffect(() => {
     setMounted(true);
   }, []);
@@ -37,32 +33,8 @@ export default function LoginFinal() {
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
   const [open, setOpen] = React.useState(false);
-  const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
 
-    setOpen(false);
-  };
-
-  const handleClick = () => {
-    setOpen(true);
-  };
-  const buttonClick = () => {
-    <div>
-      <Button onClick={handleClick}>Open Snackbar</Button>
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert
-          onClose={handleClose}
-          severity="error"
-          variant="filled"
-          sx={{ width: '100%' }}
-        >
-          This is a success Alert inside a Snackbar!
-        </Alert>
-      </Snackbar>
-    </div>
-  }
+ 
 
 
   const handleSubmit = async () => {
@@ -75,8 +47,6 @@ export default function LoginFinal() {
     }
     else
       if (res == 'failed') {
-        buttonClick()
-
         alert('error...')
       }
   }
@@ -93,8 +63,8 @@ export default function LoginFinal() {
         <Sheet id="logins"
           sx={{
             width: 300,
-            mx: 'auto', // margin left & right
-            my: 4, // margin top & bottom
+            // mx: 'auto', // margin left & right
+            my:6, // margin top & bottom
             py: 3, // padding top & bottom
             px: 10, // padding left & right
             display: 'flex',
@@ -137,14 +107,8 @@ export default function LoginFinal() {
             />
           </FormControl>
 
-          <Button sx={{ mt: 1 /* margin top */ }} onClick={handleSubmit}>Log in</Button>
-          <Typography
-            endDecorator={<Link href="/sign-up">Sign up</Link>}
-            fontSize="sm"
-            sx={{ alignSelf: 'center' }}
-          >
-            Don&apos;t have an account?
-          </Typography>
+          <Button sx={{ mt: 1 /* margin top */ }} className="button-login" onClick={handleSubmit}>Log in</Button>
+          
         </Sheet>
       </main>
       </div>

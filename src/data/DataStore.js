@@ -5,12 +5,6 @@ class dataStore {
     meeting=[];          
  
     businessData = {
-        // name: "Yair Itzkovits",
-        // address: "Rothschild 60 Tel Aviv",
-        // phone: "03-1234567",
-        // owner: "Yariv Katz",
-        // logo: "https://coding-academy.org/images/ca_logo.png",
-        // description: "The largest law firm in Israel,Here you can get the best professionalism.",
     }
 
 
